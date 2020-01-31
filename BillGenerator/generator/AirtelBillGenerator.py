@@ -22,7 +22,7 @@ class AirtelBilGenerator:
             content = content.replace("${BillDate}", date[1])
             content = content.replace("${FineDate}", date[2])
             content = content.replace("${BillNumber}", date[3])
-            to_file_path = os.path.join(self.output_dir, date[0]+"_phoneBill.html")
+            to_file_path = os.path.join(self.output_dir, "phone", date[0]+"_phoneBill.html")
             f = open(to_file_path, "w+")
             f.write(content)
             f.close()
